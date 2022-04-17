@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+.first-view {
+  height: calc(100vh - 0px);
+  background-image: url(../../images/index/bg-main1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.first-view-text {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-bottom: 80px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.first-view-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 56px;
+  line-height: 72px;
+  text-align: center;
+}
+
+.first-view-text p {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.news {
+  padding: 50px 0;
+  background: #000000;
+  }
+  
+  
+  .inner {
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 65px 0 100px;
+  }
+  
+  
+  .sub_ttl {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  }
+  
+  /* ここからがニュース記事のCSS */
+  
+  .news_list {
+  margin: 0 5%;
+  }
+  
+  .news_list_item {
+  padding: 25px 0;
+  border-bottom: 1px solid #E6E6E6;
+  }
+  
+  .news_list_item:first-child {
+  border-top: 1px solid #E6E6E6;
+  }
+  .news_list_item a {
+  position: relative;
+  display: flex;
+  padding-right: 30px;
+  }
+  
+  .news_list_date {
+  font-size: 15px;
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+  }
+  
+  .news_item {
+  background: #6e669c;
+  border-radius: 14px;
+  width: 16em;
+  /* 親要素の文字サイズを基準 */
+  text-align: center;
+  margin-left: 20px;
+  }
+  
+  .arrow {
+  width: 25px;
+  height: 1px;
+  background: #707070;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  }
+  
+  .arrow::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 1px;
+  background: #707070;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0px;
+  bottom: 2px;
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 1024px) {
+    .news_list_item a {
+        display: block;
+    }
+  }
+  
+  @media screen and (max-width: 769px) {
+    .news_list_item a  {
+        font-size: 14px;
+    }
+  
+  
+  }
+  @media screen and (max-width: 480px) {
+    .arrow {
+        display: none;
+    }
+    .news_list_item a {
+        padding-right: 0;
+    }
+  }
+    
+.lead {
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.lead p {
+  line-height: 2;
+  text-align: center;
+}
+
+.link-button-area {
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.link-button {
+  background-color: #000000;
+  display: inline-block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.link-button:hover {
+  background-color: #000000;
+}
+
+.recommended {
+  background-color: #f8f8f8;
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+
+.recommended h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.recommended h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000000;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-list {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  overflow: scroll;
+}
+
+.item-list li {
+  flex-shrink: 0;
+  width: 260px;
+  margin-left: 75px;
+}
+
+.item-list li:first-child {
+  margin-left: 0;
+}
+
+.item-list dl {
+  margin-top: 20px;
+}
+
+.item-list dt {
+  font-weight: bold;
+}
+
+.item-list dd {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.item-list .price {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+  .first-view {
+    height: calc(100vh - 50px);
+    background-image: url(../images/index/bg-main1.jpg);
+    align-items: flex-start;
+    background-position: center right;
+  }
+
+  .first-view-text {
+    padding-top: 400px;
+    padding-left: 20px;
+  }
+
+  .first-view-text h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .first-view-text p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .lead {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .lead p {
+    text-align: left;
+  }
+
+  .item-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item-list li {
+    width: 220px;
+    margin-left: 30px;
+  }
+}

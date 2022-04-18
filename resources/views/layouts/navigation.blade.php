@@ -18,6 +18,9 @@
           <x-nav-link :href="route('admin.news.index')">
             ニュース
           </x-nav-link>
+          <x-nav-link :href="route('admin.books.index')">
+            蔵書
+          </x-nav-link>
         </div>
       </div>
 

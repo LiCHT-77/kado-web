@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\BookCategoryController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SiteController;
-use App\Models\News;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,20 @@ Route::middleware(['auth'])->prefix('/admin')->group(function () {
     Route::get('/news/{id}', [NewsController::class, 'edit'])->name('admin.news.edit');
     Route::put('/news/{id}', [NewsController::class, 'update'])->name('admin.news.update');
     Route::delete('/news/{id}', [NewsController::class, 'destroy'])->name('admin.news.delete');
+
+    Route::get('/books', [BookController::class, 'index'])->name('admin.books.index');
+    Route::get('/books/create', [BookController::class, 'create'])->name('admin.books.create');
+    Route::post('/books', [BookController::class, 'store'])->name('admin.books.store');
+    Route::get('/books/{id}', [BookController::class, 'edit'])->name('admin.books.edit');
+    Route::put('/books/{id}', [BookController::class, 'update'])->name('admin.books.update');
+    Route::delete('/books/{id}', [BookController::class, 'destroy'])->name('admin.books.delete');
+
+    Route::get('/book_categories', [BookCategoryController::class, 'index'])->name('admin.book_categories.index');
+    Route::get('/book_categories/create', [BookCategoryController::class, 'create'])->name('admin.book_categories.create');
+    Route::post('/book_categories', [BookCategoryController::class, 'store'])->name('admin.book_categories.store');
+    Route::get('/book_categories/{id}', [BookCategoryController::class, 'edit'])->name('admin.book_categories.edit');
+    Route::put('/book_categories/{id}', [BookCategoryController::class, 'update'])->name('admin.book_categories.update');
+    Route::delete('/book_categories/{id}', [BookCategoryController::class, 'destroy'])->name('admin.book_categories.delete');
 });
 
 Route::get('/', [SiteController::class, 'index']);

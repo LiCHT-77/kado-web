@@ -14,6 +14,11 @@ class NewsService
      */
     protected $newsModel;
     
+    /**
+     * construct
+     *
+     * @param News $news
+     */
     public function __construct(News $news)
     {
         $this->newsModel = $news;
